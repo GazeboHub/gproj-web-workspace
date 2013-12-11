@@ -1,6 +1,13 @@
+# Emacs
+*~
+*#
+# Eclipse IDE
+RemoteSystemsTempFiles
+.settings
+# Java
 *.class
-
-# Package Files #
+## Java package files
 *.jar
 *.war
 *.ear
+
