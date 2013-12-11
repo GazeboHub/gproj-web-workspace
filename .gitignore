@@ -3,6 +3,7 @@
 *#
 # Eclipse IDE
 RemoteSystemsTempFiles
+.metadata
 .settings
 # Java
 *.class
@@ -10,4 +11,3 @@ RemoteSystemsTempFiles
 *.jar
 *.war
 *.ear
-
