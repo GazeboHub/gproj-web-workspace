@@ -1,3 +1,6 @@
 [submodule "site/gproj-ghub-site"]
 	path = site/gproj-ghub-site
 	url = git@github.com:GazeboHub/gproj-ghub-site-manage.git
+[submodule "project/manage"]
+	path = project/manage
+	url = git@github.com:GazeboHub/gproj-project-manage.git
