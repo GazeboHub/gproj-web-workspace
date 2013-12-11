@@ -4,3 +4,12 @@
 [submodule "project/manage"]
 	path = project/manage
 	url = git@github.com:GazeboHub/gproj-project-manage.git
+[submodule "site/portal-gproj"]
+	path = site/portal-gproj
+	url = git@github.com:GazeboHub/portal-gproj-manage.git
+[submodule "project/archetypes/archetype-oso-servlet-manage"]
+	path = project/archetypes/archetype-oso-servlet-manage
+	url = git@github.com:GazeboHub/archetype-oso-servlet-manage.git
+[submodule "project/resource-lab"]
+	path = project/resource-lab
+	url = git@github.com:GazeboHub/gproj-resource-lab.git
