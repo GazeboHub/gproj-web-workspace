@@ -13,3 +13,6 @@
 [submodule "project/resource-lab"]
 	path = project/resource-lab
 	url = git@github.com:GazeboHub/gproj-resource-lab.git
+[submodule "project/gproj-km"]
+	path = project/gproj-km
+	url = git@github.com:GazeboHub/gproj-km.git
