@@ -13,5 +13,6 @@
     <module>resource-lab</module>
     <module>manage</module>
     <module>archetypes/archetype-oso-servlet-manage</module>
+    <module>gproj-km</module>
   </modules>
 </project>
