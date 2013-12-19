@@ -5,6 +5,7 @@
 RemoteSystemsTempFiles
 .metadata
 .settings
+.classpath
 # Java
 *.class
 ## Java package files
