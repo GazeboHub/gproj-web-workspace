@@ -12,3 +12,5 @@ RemoteSystemsTempFiles
 *.jar
 *.war
 *.ear
+## Maven
+target
