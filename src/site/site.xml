@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<project name="Gazebo Project - Maven Site">
+ <body>
+   <menu name="Gazebo Project Web">
+     <item name="Github Pages"
+           href="http://gazebohub.github.io/"/>
+     <item name="Portal Prototype"
+           href="http://porta-gproj.rhcloud.com/"/>
+   </menu>
+   <!-- cf.
+        http://maven.apache.org/guides/mini/guide-site.html
+   -->
+   <menu ref="reports"/>
+ </body>
+</project>
