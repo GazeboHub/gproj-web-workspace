@@ -16,3 +16,6 @@
 [submodule "project/gproj-km"]
 	path = project/gproj-km
 	url = git@github.com:GazeboHub/gproj-km.git
+[submodule "project/ghub-doc"]
+	path = project/ghub-doc
+	url = git@github.com:GazeboHub/ghub-doc.git

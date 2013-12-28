@@ -14,5 +14,6 @@
     <module>manage</module>
     <module>archetypes/archetype-oso-servlet-manage</module>
     <module>gproj-km</module>
+    <module>ghub-doc</module>
   </modules>
 </project>
