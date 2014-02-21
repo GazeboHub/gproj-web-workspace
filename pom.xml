@@ -1,13 +1,94 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>ws.gazebo.openshift.gproj</groupId>
-  <artifactId>gproj-web-workspace</artifactId>
-  <packaging>pom</packaging>
-  <version>1.0</version>
-  <name>Workspace and source tree for GProj web resource management</name>
-  <modules>
-    <module>site/pom.xml</module>
-    <module>project/pom.xml</module>
-  </modules>
+        xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+        <modelVersion>4.0.0</modelVersion>
+
+        <groupId>ws.gazebo.openshift.gproj</groupId>
+        <artifactId>gproj-web-workspace</artifactId>
+        <packaging>pom</packaging>
+        <version>1.0</version>
+        <name>Workspace and source tree for GProj web resource management</name>
+
+        <modules>
+                <module>site/pom.xml</module>
+                <module>project/pom.xml</module>
+        </modules>
+
+        <build>
+          <plugins>
+            <plugin>
+              <artifactId>maven-site-plugin</artifactId>
+              <inherited>true</inherited>
+              <configuration>
+                <!-- <topSiteURL>http://gazebohub.github.io/mvn-site/</topSiteURL> -->
+
+                <!-- "Note: stagingDirectory
+                     cannot be dynamic,
+                     i.e. stagingDirectory=${basedir}\fullsite
+                     cf.
+                     http://maven.apache.org/plugins/maven-site-plugin/usage.html
+                -->
+
+                <!-- <stagingDirectory>file://xsite/gproj-ghub-site/staging/mvn-site-staging</stagingDirectory> -->
+              </configuration>
+            </plugin>
+            <plugin>
+              <artifactId>site-maven-plugin</artifactId>
+              <groupId>com.github.github</groupId>
+              <inherited>false</inherited>
+              <configuration>
+                <path>mvn-site</path>
+                <dryRun>true</dryRun>
+                <message>Creating site for ${project.version}</message>
+              </configuration>
+              <executions>
+                <execution>
+                  <goals>
+                    <goal>site</goal>
+                  </goals>
+                  <phase>site</phase>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+          <pluginManagement>
+            <plugins>
+              <plugin>
+                <artifactId>maven-site-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>3.3</version>
+              </plugin>
+              <plugin>
+                <!-- cf.
+                     http://maven.apache.org/guides/mini/guide-site.html
+                -->
+                <!-- NOTE: The version, here, is not picked up by
+                xpath:/*/reporting/plugins/plugin  -->
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <groupId>org.apache.maven.plugins</groupId>
+                <version>2.7</version>
+              </plugin>
+              <plugin>
+                <artifactId>site-maven-plugin</artifactId>
+                <groupId>com.github.github</groupId>
+                <version>0.9</version>
+              </plugin>
+            </plugins>
+          </pluginManagement>
+        </build>
+
+        <distributionManagement>
+          <site>
+            <id>ghub-gh-pages</id>
+            <url>http://gazebohub.github.io/mvn-site/</url>
+          </site>
+        </distributionManagement>
+
+        <reporting>
+          <plugins>
+            <plugin>
+              <artifactId>maven-project-info-reports-plugin</artifactId>
+              <version>2.7</version>
+            </plugin>
+          </plugins>
+        </reporting>
 </project>
